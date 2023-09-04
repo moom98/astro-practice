@@ -1,0 +1,88 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+---
+
+<Layout title="Maya Uematsu portfolio">
+  <div id="works">
+    <Header />
+
+    <main class="main" id="main">
+      <div class="works">
+        <div class="works__bgWrap">
+          <div class="works__bg works__bgwss"></div>
+          <div class="works__circle"></div>
+        </div>
+        <div class="works__flexwrap">
+          <div class="works__wrap">
+            <p class="works__pic">
+              <img
+                src="../images/img_mockup_wss.png"
+                alt="作品画面モックアップ"
+                class="works__img"
+              />
+            </p>
+            <div class="works__container">
+              <div class="works__box">
+                <h2 class="works__ttl">Web Study Sapporo</h2>
+                <p class="works__itemSub">職業訓練校HP</p>
+                <div class="works__tagWrap">
+                  <p class="works__tag">#cording</p>
+                  <p class="works__tag">#design</p>
+                </div>
+              </div>
+              <div class="more stkr-target">
+                <a href="../GOAT/index.html" class="more__link" target="_blank">
+                  <p class="more__txt">visit site</p>
+                </a>
+              </div>
+            </div>
+            <div class="works__cap">
+              <div class="works__time">
+                製作時期：入学3ヶ月目　制作期間：2週間<br />
+                XD/Photoshop/HTML/Sass/Jquery　下層ページあり
+              </div>
+              <p class="works__txt">
+                通っていたWSSのサイトリニューアルを5人チームで行い、<br />
+                アシスタントディレクター、メインデザイナー、サブコーダーを担当しました。<br
+                />
+                コーディング担当箇所は就職実績ページと各ページの要素フェードイン部分です。<br
+                />
+                業界未経験の方でも親しみやすいように清潔感と安心感をテーマにデザインしました。<br
+                />
+                閲覧中いつでも見学会の予約ページへたどり着けるように<br
+                />ボタンを配置したのがポイントです。<br />
+              </p>
+            </div>
+            <div class="navi">
+              <div class="prev stkr-target firstworks">
+                <a href="" class="navi__link">PREV</a>
+                <div class="prev__line"></div>
+              </div>
+              <p class="return stkr-target">
+                <a href="../index.html#work" class="return__link"
+                  >return to TOP</a
+                >
+              </p>
+              <div class="next stkr-target">
+                <a href="hanamori.html" class="navi__link">NEXT</a>
+                <div class="next__line"></div>
+              </div>
+              <div class="numbering">1／12</div>
+            </div>
+          </div>
+          <div class="works__pageshot">
+            <div class="works__scroll"><span>Scroll</span></div>
+            <p class="works__pagepic">
+              <img
+                src="../images/page_wss.webp"
+                alt="wssページフルスクリーンショット"
+                class="works__pageimg"
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>

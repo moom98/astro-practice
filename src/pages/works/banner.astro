@@ -1,0 +1,70 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+---
+
+<Layout title="Maya Uematsu portfolio">
+  <div id="works">
+    <Header />
+    <main class="main" id="main">
+      <div class="works">
+        <div class="works__bgWrap">
+          <div class="works__bg works__bgbanner"></div>
+          <div class="works__circle"></div>
+        </div>
+        <div class="works__flexwrap">
+          <div class="works__wrap">
+            <p class="works__pic">
+              <img
+                src="../images/banner_img01.png"
+                alt="バナー"
+                class="works__img"
+              />
+            </p>
+            <div class="works__container">
+              <div class="works__box">
+                <h2 class="works__ttl">Banner Design</h2>
+                <p class="works__itemSub">webバナー</p>
+                <div class="works__tagWrap">
+                  <p class="works__tag">#design</p>
+                </div>
+              </div>
+            </div>
+            <div class="works__cap">
+              <div class="works__time">
+                製作時期：入学2ヶ月目　制作期間：各2日間<br />
+                Photoshop/Illustrator
+              </div>
+              <p class="works__txt">
+                （左・レモン）2人でチームを組み、お互いの考案したプロダクトの広告バナーを作る課題で制作しました。<br
+                />
+                「マイヤーレモン」という品種の特性を生かして、<br />
+                尖りのないレモンのおいしさやさわやかさを表現しています。<br />
+                （右・ECサイト）実際にHPも制作した「ロイズコーヒー」のECサイト誘導バナーです。<br
+                />
+                老舗ならではのこだわりを含ませながら、クリックを誘導できるようなデザインに苦労しました。<br
+                />
+              </p>
+            </div>
+            <div class="navi">
+              <div class="prev stkr-target">
+                <a href="flyer.html" class="navi__link">PREV</a>
+                <div class="prev__line"></div>
+              </div>
+              <p class="return stkr-target">
+                <a href="../index.html#work" class="return__link"
+                  >return to TOP</a
+                >
+              </p>
+              <div class="next stkr-target lastworks">
+                <a href="" class="navi__link">NEXT</a>
+                <div class="next__line"></div>
+              </div>
+              <div class="numbering">12／12</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>

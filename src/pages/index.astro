@@ -1,123 +1,725 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Form from "../components/index/Form.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
-			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-				d="M167.19 364.254C83.4786 364.254 0 404.819 0 404.819C0 404.819 141.781 19.4876 142.087 18.7291C146.434 7.33701 153.027 0 162.289 0H332.441C341.703 0 348.574 7.33701 352.643 18.7291C352.92 19.5022 494.716 404.819 494.716 404.819C494.716 404.819 426.67 364.254 327.525 364.254L264.41 169.408C262.047 159.985 255.147 153.581 247.358 153.581C239.569 153.581 232.669 159.985 230.306 169.408L167.19 364.254ZM160.869 530.172C160.877 530.18 160.885 530.187 160.894 530.195L160.867 530.181C160.868 530.178 160.868 530.175 160.869 530.172ZM136.218 411.348C124.476 450.467 132.698 504.458 160.869 530.172C160.997 529.696 161.125 529.242 161.248 528.804C161.502 527.907 161.737 527.073 161.917 526.233C165.446 509.895 178.754 499.52 195.577 500.01C211.969 500.487 220.67 508.765 223.202 527.254C224.141 534.12 224.23 541.131 224.319 548.105C224.328 548.834 224.337 549.563 224.347 550.291C224.563 566.098 228.657 580.707 237.264 593.914C245.413 606.426 256.108 615.943 270.749 622.478C270.593 621.952 270.463 621.508 270.35 621.126C270.045 620.086 269.872 619.499 269.685 618.911C258.909 585.935 266.668 563.266 295.344 543.933C298.254 541.971 301.187 540.041 304.12 538.112C310.591 533.854 317.059 529.599 323.279 525.007C345.88 508.329 360.09 486.327 363.431 457.844C364.805 446.148 363.781 434.657 359.848 423.275C358.176 424.287 356.587 425.295 355.042 426.275C351.744 428.366 348.647 430.33 345.382 431.934C303.466 452.507 259.152 455.053 214.03 448.245C184.802 443.834 156.584 436.019 136.218 411.348Z"
-				fill="url(#paint0_linear_1805_24383)"></path>
-			<defs>
-				<linearGradient
-					id="paint0_linear_1805_24383"
-					x1="247.358"
-					y1="0"
-					x2="247.358"
-					y2="622.479"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stop-opacity="0.9"></stop>
-					<stop offset="1" stop-opacity="0.2"></stop>
-				</linearGradient>
-			</defs>
-		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Maya Uematsu portfolio">
+  <div class="loading">
+    <div class="loading__animation">
+      <div class="loading__sircle"></div>
+      <p class="loading__txt"></p>
+    </div>
+  </div>
+
+  <Header />
+
+  <div id="index">
+    <main class="main" id="main">
+      <div class="mv" id="mv">
+        <img src="images/mv_huge.svg" alt="ME" class="mv__img" />
+        <div class="mv__scroll">
+          <div class="mv__scroll-line"></div>
+        </div>
+      </div>
+
+      <div class="about" id="about">
+        <div class="stroke">
+          <div class="stroke__bg">
+            <div class="stroke__front stroke__about">
+              <img
+                src="images/about_huge_pn.svg"
+                alt="ABOUT ME"
+                class="stroke__Fimg about__img"
+              />
+            </div>
+            <p class="stroke__pic">
+              <img
+                src="images/img_about_b.webp"
+                alt="プロフィール写真"
+                class="stroke__img"
+              />
+            </p>
+          </div>
+          <div class="stroke__back stroke__about">
+            <div class="stroke__inner">
+              <img
+                src="images/about_huge_bb.svg"
+                alt="ABOUT ME"
+                class="stroke__Bimg about__img"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="about__box">
+          <p class="about__nameSub">Maya Uematsu</p>
+          <div class="about__nameWrap">
+            <p class="about__name">上松　眞綾</p>
+            <div class="about__iconWrap">
+              <a
+                href="https://github.com/ymkmy98"
+                target="_blank"
+                class="about__iconLink stkr-target"
+              >
+                <img
+                  src="images/github-mark.svg"
+                  alt="githubへのリンク"
+                  class="about__iconImg"
+                />
+              </a>
+            </div>
+          </div>
+          <p class="about__txt">
+            大学で学んだ経営学や前職の写真レタッチ業務を通して、
+            表に立つ人たちを支えられるクリエイティブな仕事をライフワークとしたいと思うようになりました。<br
+            />
+            webの利点のひとつであるタッチポイントの幅の広さを活かすべく、ウェブアクセシビリティやUI/UXを意識しながらキャリアを重ねたいと考えています。<br
+            />
+            誰かの想いやアイデアを形に起こしたり演出したりすることが好きで、縁の下の力持ちを自負しています。
+          </p>
+        </div>
+      </div>
+
+      <section class="work" id="work">
+        <div class="work__wrap">
+          <h2 class="work__huge">
+            <img
+              src="images/work_huge.svg"
+              alt="workセクションロゴ"
+              class="work__img"
+            />
+          </h2>
+
+          <div class="work__bgWrap">
+            <div class="work__bg bg01" id="bg01"></div>
+            <div class="work__bg bg02" id="bg02"></div>
+            <div class="work__bg bg03" id="bg03"></div>
+            <div class="work__bg bg04" id="bg04"></div>
+            <div class="work__bg bg05" id="bg05"></div>
+            <div class="work__bg bg06" id="bg06"></div>
+            <div class="work__bg bg07" id="bg07"></div>
+            <div class="work__bg bg08" id="bg08"></div>
+            <div class="work__bg bg09" id="bg09"></div>
+            <div class="work__bg bg10" id="bg10"></div>
+            <div class="work__bg bg11" id="bg11"></div>
+            <div class="work__bg bg12" id="bg12"></div>
+          </div>
+
+          <div class="work__sideScroll">
+            <div class="work__list">
+              <div
+                class="work__item stkr-target"
+                id="work01"
+                data-target="#bg01"
+              >
+                <a href="/works/wss/" class="work__link">
+                  <h3 class="work__itemTitle">WSS</h3>
+                  <div class="work__picWrap">
+                    <div class="work__itemPic">
+                      <p class="work__itemlogo">
+                        <img
+                          src="images/wss_logo.svg"
+                          alt="wssロゴ"
+                          class="work__logoimg"
+                        />
+                      </p>
+                      <img
+                        src="images/bg_workItem_wss.jpg"
+                        alt="wssリニューアルサイト"
+                        class="work__itemImg"
+                      />
+                    </div>
+                  </div>
+                  <h4 class="work__itemSub">職業訓練校HP</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#coding</p>
+                    <p class="work__tag">#design</p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work02"
+                data-target="#bg02"
+              >
+                <a href="works/hanamori.html" class="work__link">
+                  <h3 class="work__itemTitle">hanamori.</h3>
+                  <div class="work__picWrap">
+                    <div class="work__itemPic">
+                      <p class="work__itemlogo">
+                        <img
+                          src="images/logo_hanamori.png"
+                          alt="hanamoriロゴ"
+                          class="work__logoimg"
+                        />
+                      </p>
+                      <img
+                        src="images/bg_workItem_hanamori.jpg"
+                        alt="hanamori.サムネイル"
+                        class="work__itemImg"
+                      />
+                    </div>
+                  </div>
+                  <h4 class="work__itemSub">観葉植物ECサイト</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#coding</p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work03"
+                data-target="#bg03"
+              >
+                <a href="works/endo-dc.html" class="work__link">
+                  <h3 class="work__itemTitle">ENDO Dental Clinic</h3>
+                  <div class="work__picWrap">
+                    <div class="work__itemPic">
+                      <p class="work__itemlogo">
+                        <img
+                          src="images/logo_endo.png"
+                          alt="遠藤歯科医院ロゴ"
+                          class="work__logoimg"
+                        />
+                      </p>
+                      <img
+                        src="images/bg_workItem_endo.jpg"
+                        alt="遠藤歯科医院"
+                        class="work__itemImg"
+                      />
+                    </div>
+                  </div>
+                  <h4 class="work__itemSub">歯科医院HP</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#coding</p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work04"
+                data-target="#bg04"
+              >
+                <a href="works/tanakaya.html" class="work__link">
+                  <h3 class="work__itemTitle">Tanakaya</h3>
+                  <div class="work__itemPic">
+                    <p class="work__itemlogo">
+                      <img
+                        src="images/logo_tanakaya.png"
+                        alt="田中屋ロゴ"
+                        class="work__logoimg"
+                      />
+                    </p>
+                    <img
+                      src="images/bg_workItem_tanakaya.jpg"
+                      alt="田中屋サムネイル"
+                      class="work__itemImg"
+                    />
+                  </div>
+                  <h4 class="work__itemSub">建築会社HP</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#coding</p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work05"
+                data-target="#bg05"
+              >
+                <a href="works/cafeazito.html" class="work__link">
+                  <h3 class="work__itemTitle">cafe azito</h3>
+                  <div class="work__itemPic">
+                    <p class="work__itemlogo">
+                      <img
+                        src="images/logo_azito.png"
+                        alt="カフェアジトロゴ"
+                        class="work__logoimg"
+                      />
+                    </p>
+                    <img
+                      src="images/bg_workItem_azito.jpg"
+                      alt="カフェアジトサムネイル"
+                      class="work__itemImg"
+                    />
+                  </div>
+                  <h4 class="work__itemSub">カフェHP</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#coding</p>
+                    <p class="work__tag">#design</p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work06"
+                data-target="#bg06"
+              >
+                <!-- <a href="works/lloyds.html" class="work__link">
+                    <h3 class="work__itemTitle">LLOYD's COFFEE</h3>
+                    <div class="work__itemPic">
+                      <p class="work__itemlogo">
+                        <img
+                          src="images/logo_lloyds.png"
+                          alt="ロイズコーヒーロゴ"
+                          class="work__logoimg"
+                        />
+                      </p>
+                      <img
+                        src="images/bg_workItem_lloyds.jpg"
+                        alt="ロイズコーヒーサムネイル"
+                        class="work__itemImg"
+                      />
+                    </div>
+                    <h4 class="work__itemSub">コーヒーECサイト</h4>
+                    <div class="work__tagWrap">
+                      <p class="work__tag">#wordpress</p>
+                      <p class="work__tag">#design</p>
+                    </div>
+                  </a> -->
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work07"
+                data-target="#bg07"
+              >
+                <a href="works/musubi.html" class="work__link">
+                  <h3 class="work__itemTitle">MUSUBI</h3>
+                  <div class="work__itemPic">
+                    <p class="work__itemlogo">
+                      <img
+                        src="images/logo_musubi.svg"
+                        alt="むすびロゴ"
+                        class="work__logoimg"
+                      />
+                    </p>
+                    <img
+                      src="images/bg_workItem_musubi.jpg"
+                      alt="ごはんやむすびサムネイル"
+                      class="work__itemImg"
+                    />
+                  </div>
+                  <h4 class="work__itemSub">飲食店HP</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#coding</p>
+                    <p class="work__tag">#design</p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work08"
+                data-target="#bg08"
+              >
+                <a href="works/morimaiko.html" class="work__link">
+                  <h3 class="work__itemTitle">MORI MAIKO</h3>
+                  <div class="work__itemPic">
+                    <p class="work__itemlogo">
+                      <img
+                        src="images/logo_morimaiko.png"
+                        alt="森舞子展ロゴ"
+                        class="work__logoimg"
+                      />
+                    </p>
+                    <img
+                      src="images/bg_workItem_morimaiko.jpg"
+                      alt="森舞子展 サムネイル"
+                      class="work__itemImg"
+                    />
+                  </div>
+                  <h4 class="work__itemSub">展覧会告知サイト</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#coding</p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work09"
+                data-target="#bg09"
+              >
+                <a href="works/sides.html" class="work__link">
+                  <h3 class="work__itemTitle">SIDES</h3>
+                  <div class="work__itemPic">
+                    <p class="work__itemlogo">
+                      <img
+                        src="images/logo_sides.png"
+                        alt="sidesロゴ"
+                        class="work__logoimg"
+                      />
+                    </p>
+                    <img
+                      src="images/bg_workItem_sides.jpg"
+                      alt="sides サムネイル"
+                      class="work__itemImg"
+                    />
+                  </div>
+                  <h4 class="work__itemSub">セレクト家具ECサイト</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#coding</p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work10"
+                data-target="#bg10"
+              >
+                <a href="works/nextone.html" class="work__link">
+                  <h3 class="work__itemTitle">NEXT ONE SAPPORO</h3>
+                  <div class="work__itemPic">
+                    <p class="work__itemlogo">
+                      <img
+                        src="images/logo_nextone.svg"
+                        alt="ネクストワンロゴ"
+                        class="work__logoimg"
+                      />
+                    </p>
+                    <img
+                      src="images/bg_workItem_nextone.jpg"
+                      alt="sides サムネイル"
+                      class="work__itemImg"
+                    />
+                  </div>
+                  <h4 class="work__itemSub">コーポレートサイト</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#coding</p>
+                    <p class="work__tag">#design</p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work11"
+                data-target="#bg11"
+              >
+                <a href="works/flyer.html" class="work__link">
+                  <h3 class="work__itemTitle">FLYER</h3>
+                  <div class="work__itemPic">
+                    <p class="work__itemlogo">
+                      <img
+                        src="images/logo_flyer.png"
+                        alt=""
+                        class="work__logoimg"
+                      />
+                    </p>
+                    <img
+                      src="images/bg_workItem_flyer.jpg"
+                      alt="フライヤー サムネイル"
+                      class="work__itemImg"
+                    />
+                  </div>
+                  <h4 class="work__itemSub">演劇フライヤー</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#design</p>
+                    <p class="work__tag">#shoot</p>
+                    <p class="work__tag">#direction</p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="work__item stkr-target"
+                id="work12"
+                data-target="#bg12"
+              >
+                <a href="works/banner.html" class="work__link">
+                  <h3 class="work__itemTitle">BANNER</h3>
+                  <div class="work__itemPic">
+                    <p class="work__itemlogo">
+                      <img
+                        src="images/logo_banner.png"
+                        alt="むすびロゴ"
+                        class="work__logoimg"
+                      />
+                    </p>
+                    <img
+                      src="images/bg_workItem_banner.jpg"
+                      alt="バナー サムネイル"
+                      class="work__itemImg"
+                    />
+                  </div>
+                  <h4 class="work__itemSub">Webバナー</h4>
+                  <div class="work__tagWrap">
+                    <p class="work__tag">#design</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skill" id="skill">
+        <div class="skill__ttl">
+          <h2 class="skill__ttlTxt">SKILL</h2>
+        </div>
+        <div class="skill__ttlPic">
+          <img
+            src="images/skill_huge.svg"
+            alt="スキルセクションタイトル"
+            class="skill__ttlImg"
+          />
+        </div>
+
+        <div class="skill__wrap">
+          <div class="skill__box area01">
+            <img
+              src="images/icon_htmlcss.svg"
+              alt="HTMLとCSSアイコン"
+              class="skill__icon"
+            />
+            <h3 class="skill__sub">HTML/CSS</h3>
+            <p class="skill__txt">アクセシビリティの強化が個人的課題です</p>
+          </div>
+          <div class="skill__box area02">
+            <img
+              src="images/icon_js.svg"
+              alt="JavaScriptアイコン"
+              class="skill__icon"
+            />
+            <h3 class="skill__sub">JavaScript</h3>
+            <p class="skill__txt">TypeScript・<br />React・Next.js勉強中</p>
+          </div>
+          <div class="skill__box area03">
+            <img
+              src="images/icon_wp.svg"
+              alt="wordpressアイコン"
+              class="skill__icon"
+            />
+            <h3 class="skill__sub">wordpress</h3>
+            <p class="skill__txt">
+              新規テーマファイル作成<br />バージョンアップ
+            </p>
+          </div>
+          <div class="skill__box area04">
+            <img
+              src="images/icon_git.svg"
+              alt="gitアイコン"
+              class="skill__icon"
+            />
+            <h3 class="skill__sub">Git</h3>
+            <p class="skill__txt">GithubやSourceTreeでの<br />バージョン管理</p>
+          </div>
+          <div class="skill__box area05">
+            <img
+              src="images/icon_xd.svg"
+              alt="xdアイコン"
+              class="skill__icon"
+            />
+            <h3 class="skill__sub">Adobe XD</h3>
+            <p class="skill__txt">ワイヤーフレーム、<br />デザインカンプ制作</p>
+          </div>
+          <div class="skill__box area06">
+            <img
+              src="images/icon_ps.svg"
+              alt="photoshopアイコン"
+              class="skill__icon"
+            />
+            <h3 class="skill__sub">Adobe Photoshop</h3>
+            <p class="skill__txt">
+              画像加工、人物レタッチ（体型・肌などの補正）
+            </p>
+          </div>
+          <div class="skill__box area07">
+            <img
+              src="images/icon_ill.svg"
+              alt="Illustratorアイコン"
+              class="skill__icon"
+            />
+            <h3 class="skill__sub">Adobe Illustrator</h3>
+            <p class="skill__txt">フライヤーや広告バナーなどのデザイン制作</p>
+          </div>
+          <div class="skill__box area08">
+            <img
+              src="images/icon_pr.svg"
+              alt="Premiereアイコン"
+              class="skill__icon"
+            />
+            <h3 class="skill__sub">Adobe Premiere</h3>
+            <p class="skill__txt">
+              動画の切り貼りやテロップ・BGM挿入などの編集
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="int" id="int">
+        <div class="int__wrap">
+          <div class="stroke">
+            <div class="stroke__bg">
+              <div class="stroke__front stroke__int">
+                <img
+                  src="images/int_huge_pn.svg"
+                  alt="int ME"
+                  class="stroke__Fimg int__img"
+                />
+              </div>
+
+              <div class="int__gallary">
+                <div class="swiper swiper-pic">
+                  <!-- サムネイル -->
+                  <div class="swiper-wrapper swiper-pic__wrapper">
+                    <div class="swiper-slide swiper-pic__slide 01">
+                      <img
+                        src="images/int_img01b.webp"
+                        alt="ムーミン"
+                        class="swiper-pic__img"
+                      />
+                    </div>
+                    <div class="swiper-slide swiper-pic__slide 02">
+                      <img
+                        src="images/int_img02b.webp"
+                        alt="本"
+                        class="swiper-pic__img"
+                      />
+                    </div>
+                    <div class="swiper-slide swiper-pic__slide 03">
+                      <img
+                        src="images/int_img03b.webp"
+                        alt="焚き火"
+                        class="swiper-pic__img"
+                      />
+                    </div>
+                    <div class="swiper-slide swiper-pic__slide 04">
+                      <img
+                        src="images/int_img04b.webp"
+                        alt="オムライス"
+                        class="swiper-pic__img"
+                      />
+                    </div>
+                    <div class="swiper-slide swiper-pic__slide 05">
+                      <img
+                        src="images/int_img05b.webp"
+                        alt="コーヒー"
+                        class="swiper-pic__img"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stroke__back stroke__int">
+              <div class="stroke__inner">
+                <img
+                  src="images/int_huge_bb.svg"
+                  alt="int ME"
+                  class="stroke__Bimg int__img"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- テキスト -->
+          <div class="swiper swiper-txt">
+            <div class="swiper-wrapper swiper-txt__wrapper">
+              <div class="swiper-slide swiper-txt__slide01">
+                <p class="swiper-txt__ttl">MOOMIN</p>
+                <p class="swiper-txt__txt">
+                  丸みのあるたっぷりとしたフォルムもさることながら、
+                  「妖精」とは名ばかりの人間くさい言動がとても愛らしいです。
+                  家族や友達に対して愛情深く、自分をありのままに受け入れられる。そんなムーミンをはじめとするムーミン谷の住人たちを、とても尊敬しています。
+                </p>
+              </div>
+              <div class="swiper-slide swiper-txt__slide02">
+                <p class="swiper-txt__ttl">CULTURE</p>
+                <p class="swiper-txt__txt">
+                  どんなときも、本、映画、音楽、アニメ、いろいろな作品に支えられながら過ごしてきました。
+                  最近見たものの中では、エッセイ「海をあげる」や詩集「二十億光年の孤独」、映画「スパイダーマン：ACROSS
+                  THE SPIDER VERSE」がマイヒットです。
+                </p>
+              </div>
+              <div class="swiper-slide swiper-txt__slide03">
+                <p class="swiper-txt__ttl">CAMP</p>
+                <p class="swiper-txt__txt">
+                  小さい頃から家族でキャンプに出かけることが多く、今でもキャンプが大好きです。水の流れや風の音、火のゆらめきを感じると、鈍っていた感覚がリセットされたような気持ちになります。いつものご飯を野外で食べると美味しさが3割増くらいになる秘密をいつか突き止めたいです。
+                </p>
+              </div>
+              <div class="swiper-slide swiper-txt__slide04">
+                <p class="swiper-txt__ttl">COOKING</p>
+                <p class="swiper-txt__txt">
+                  かつては飲食店の立ち上げを目指していたこともあり、料理は今でも趣味のひとつです。
+                  最近は作りおきにハマっていて、冷めても美味しい料理を作れるように研究しています。写真はオムライスですが、一番得意な料理はチャーハンです。
+                </p>
+              </div>
+              <div class="swiper-slide swiper-txt__slide05">
+                <p class="swiper-txt__ttl">COFFEE</p>
+                <p class="swiper-txt__txt">
+                  最近、趣味の仲間入りになりそうなもののひとつです。友人のおかげでブラックも飲めるようになりました。今はまだお湯の温度管理をする程度にとどまっていますが、近々ミル挽きデビューを企んでいます。
+                </p>
+              </div>
+            </div>
+            <div class="swiper-button-prev swiper-txt__prev stkr-target"></div>
+            <div class="swiper-button-next swiper-txt__next stkr-target"></div>
+            <div class="swiper-pagination swiper-txt__pagination"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer" id="footer">
+      <Form />
+    </footer>
+  </div>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
 </style>
