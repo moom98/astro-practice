@@ -1,0 +1,598 @@
+#index {
+  @include scrollBar;
+  @include opAnime;
+
+  #mouse {
+    @include mouse;
+  }
+
+  .wrapper {
+    position: relative;
+    font-family: yu-gothic-pr6n, sans-serif;
+    background-color: #000;
+    overflow: hidden;
+    opacity: 0;
+
+    a {
+      text-decoration: none;
+      color: currentColor;
+    }
+  }
+
+  .secScroll {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50px;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 130px;
+      @include secttl;
+      transition: opacity 0.8s;
+      opacity: 0;
+    }
+
+    &__middle {
+      @include scroll;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .mv {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    &__img {
+      display: inline-block;
+      width: 90%;
+      @include center;
+      color: #fff5f0;
+
+      @media screen and (min-width: 1024px) {
+        width: 70%;
+        padding-top: 130px;
+      }
+    }
+
+    &__canvas {
+      opacity: 0.6;
+      transition: opacity 0.8s;
+    }
+
+    &__scroll {
+      @include scroll;
+      bottom: 20px;
+
+      @media screen and (min-width: 768px) {
+        bottom: -50px;
+      }
+    }
+  }
+
+  .about {
+    overflow: hidden;
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+    padding: 0 28px;
+    margin-bottom: calc(100vh * 0.15);
+
+    @media screen and (min-width: 1280px) {
+      height: 120vh;
+      margin-bottom: 0;
+      padding: 0 0 calc(100vh / 5);
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+
+    .stroke {
+      @include stroke;
+      margin-bottom: 63px;
+    }
+
+    &__img {
+      width: 130vw;
+
+      @media screen and (min-width: 768px) {
+        width: 80vw;
+      }
+    }
+
+    &__box {
+      position: relative;
+      z-index: 3;
+      margin: 0 auto;
+
+      @media screen and (min-width: 768px) {
+        width: fit-content;
+      }
+
+      @media screen and (min-width: 1280px) {
+        margin: 0;
+      }
+    }
+
+    &__nameSub {
+      @include ttl;
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+
+    &__nameWrap {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    &__name {
+      font-size: 24px;
+    }
+
+    &__iconLink {
+      display: block;
+      width: 25px;
+      height: 25px;
+      transition: opacity 0.4s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    &__iconImg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &__txt {
+      font-size: 14px;
+      line-height: 1.5;
+
+      @media screen and (min-width: 768px) {
+        width: 480px;
+      }
+    }
+  }
+
+  .work {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+
+    &__huge {
+      width: 100%;
+      @include center;
+      transition: 0.8s;
+    }
+
+    &__bg {
+      width: 100vw;
+      height: 100vh;
+      opacity: 0;
+      transition: opacity 0.8s;
+    }
+
+    &__bgWrap {
+      display: none;
+
+      @media screen and (min-width: 1024px) {
+        display: block;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+
+    .bg01 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_wss_c.webp) center / cover no-repeat;
+    }
+
+    .bg02 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_hana_c.webp) center / cover no-repeat;
+    }
+
+    .bg03 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_endo_c.webp) center / cover no-repeat;
+    }
+
+    .bg04 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_tanakaya_c.webp) center / cover no-repeat;
+    }
+
+    .bg05 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_azito_c.webp) center / cover no-repeat;
+    }
+
+    .bg06 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_lloyds_c.webp) center / cover no-repeat;
+    }
+
+    .bg07 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_musubi_c.webp) center / cover no-repeat;
+    }
+
+    .bg08 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_mori_c.webp) center / cover no-repeat;
+    }
+
+    .bg09 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_sides_c.webp) center / cover no-repeat;
+    }
+
+    .bg10 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_nextone_c.webp) center / cover no-repeat;
+    }
+
+    .bg11 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_flyer_c.webp) center / cover no-repeat;
+    }
+
+    .bg12 {
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../_assets/images/top/img_work_banner_c.webp) center / cover no-repeat;
+    }
+
+    &__sideScroll {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+    }
+
+    &__list {
+      padding-left: 100vw;
+      position: absolute;
+      top: 50%;
+      transform: translatey(-50%);
+      @include flex;
+      gap: 50px;
+
+      @media screen and (min-width: 768px) {
+        gap: 110px;
+      }
+    }
+
+    &__item {
+      @include flex;
+      flex-direction: column;
+      transition: opacity 0.8s;
+
+      @media screen and (min-width: 1024px) {
+
+        &:hover .work__itemTitle,
+        &:hover .work__itemSub,
+        &:hover .work__tag {
+          color: #fff5f0;
+        }
+
+        &:hover .work__itemImg {
+          opacity: 0;
+        }
+
+        &:hover .work__logoimg {
+          transform: scale(1.3);
+        }
+      }
+    }
+
+    &__itemTitle {
+      @include secttl;
+      margin-bottom: 5px;
+      font-size: 26px;
+      letter-spacing: 0.1em;
+      text-align: center;
+      transition: 0.8s;
+
+      @media screen and (min-width: 768px) {
+        font-size: 40px;
+      }
+    }
+
+    &__itemPic {
+      overflow: hidden;
+      width: 250px;
+      height: 250px;
+      margin-bottom: 20px;
+      position: relative;
+      border-radius: 50%;
+      background-color: #fff5f0;
+
+      @media screen and (min-width: 768px) {
+        width: calc(4vh / 0.2);
+        height: calc(4vh / 0.2);
+        min-width: 420px;
+        min-height: 420px;
+        max-width: 503px;
+        max-height: 503px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 503px;
+        height: 503px;
+      }
+    }
+
+    &__itemlogo {
+      width: 60%;
+      height: 60%;
+      @include center;
+      z-index: 2;
+    }
+
+    &__logoimg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: 0.8s;
+    }
+
+    &__itemImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0.8;
+      transition: opacity 0.8s;
+    }
+
+    &__itemSub {
+      margin-bottom: 10px;
+      font-size: 14px;
+      text-align: center;
+      transition: 0.8s;
+    }
+
+    &__tagWrap {
+      @include flex;
+      gap: 35px;
+      justify-content: center;
+    }
+
+    &__tag {
+      @include ttl;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      transition: 0.8s;
+
+      @media screen and (min-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .skill {
+    overflow: hidden;
+    position: relative;
+    padding: 100px 28px;
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      height: 100vh;
+    }
+
+    &__ttlTxt {
+      padding-bottom: 60px;
+      @include secttl;
+      font-size: 40px;
+      text-align: center;
+
+      @media screen and (min-width: 768px) {
+        visibility: hidden;
+      }
+    }
+
+    &__ttlPic {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: block;
+        width: calc(100vh / 3.4);
+        position: absolute;
+        top: -2%;
+        right: -1%;
+      }
+
+      &__ttlImg {
+        width: 100%;
+      }
+    }
+
+    &__wrap {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "a1 a2"
+        "a3 a4"
+        "a5 a6"
+        "a7 a8";
+
+      @media screen and (min-width: 768px) {
+        width: 50%;
+        height: 80vh;
+        padding-left: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translatey(-40%);
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 65%;
+        max-width: 1250px;
+        height: fit-content;
+        padding-left: calc(100vw * 0.12);
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "a1 a2 a3 a4"
+          "a5 a6 a7 a8";
+      }
+    }
+
+    .area01 {
+      grid-area: a1;
+      transition: opacity 1s, visibility 1s, transform 1s;
+    }
+
+    .area02 {
+      grid-area: a2;
+      transition: opacity 1.4s, visibility 1.4s, transform 1.4s;
+    }
+
+    .area03 {
+      grid-area: a3;
+      transition: opacity 1.8s, visibility 1.8s, transform 1.8s;
+    }
+
+    .area04 {
+      grid-area: a4;
+      transition: opacity 2.2s, visibility 2.2s, transform 2.2s;
+    }
+
+    .area05 {
+      grid-area: a5;
+      opacity: 0;
+      transition: opacity 2.6s, visibility 2.6s, transform 2.6s;
+    }
+
+    .area06 {
+      grid-area: a6;
+      transition: opacity 3s, visibility 3s, transform 3s;
+    }
+
+    .area07 {
+      grid-area: a7;
+      transition: opacity 3.4s, visibility 3.4s, transform 3.4s;
+    }
+
+    .area08 {
+      grid-area: a8;
+      transition: opacity 3.8s, visibility 3.8s, transform 3.8s;
+    }
+
+    &__box {
+      @include flex;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(100px);
+    }
+
+    &__icon {
+      margin-bottom: 15px;
+    }
+
+    &__sub {
+      padding-bottom: 5px;
+      @include ttl;
+      font-size: 14px;
+    }
+
+    &__txt {
+      width: 140px;
+      font-size: 12px;
+      text-align: center;
+      line-height: 1.5;
+      padding-bottom: 60px;
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        padding: 0;
+      }
+
+      @media screen and (min-width: 1024px) {
+
+        &:nth-child(5),
+        &:nth-child(6) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .int {
+    overflow: hidden;
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+    padding: calc(100vh * 0.15) 20px;
+
+    @media screen and (min-width: 1280px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &__wrap {
+      width: fit-content;
+      margin: 0 auto;
+
+      @media screen and (min-width: 1280px) {
+        height: 120vh;
+        padding: 0 0 calc(100vh / 5);
+        display: flex;
+        align-items: end;
+        justify-content: center;
+      }
+    }
+
+    &__img {
+      width: 150vw;
+
+      @media screen and (min-width: 768px) {
+        width: 110vw;
+      }
+    }
+
+    .stroke {
+      @include stroke;
+      margin-bottom: 45px;
+    }
+  }
+}

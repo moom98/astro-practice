@@ -44,5 +44,12 @@ export default defineConfig({
         entryFileNames: "assets/js/[name].js",
       },
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@import "src/assets/styles/foundation/_mixin.scss";`,
+        },
+      },
+    },
   },
 });

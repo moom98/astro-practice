@@ -1,0 +1,138 @@
+// op
+.loadActive {
+    display: none;
+    visibility: hidden;
+}
+
+.loadAnimeActive {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+// btn
+.rotate-top {
+    transform: rotate(45deg);
+    width: 20px;
+}
+
+.rotate-middle {
+    opacity: 0;
+}
+
+.rotate-bottom {
+    transform: rotate(-45deg);
+    width: 20px;
+}
+
+// gnav
+.gnavActive {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.btnActive {
+    background-color: #fff5f0 !important;
+}
+
+.headerActive {
+    color: #fff5f0;
+    fill: currentColor;
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
+
+// work hover
+.workItemActive {
+    color: #fff5f0;
+}
+
+.workBgActive {
+    opacity: 1 !important;
+    color: #fff5f0;
+}
+
+
+// svg
+.mv__img path,
+.work__img path {
+    stroke: currentColor;
+    stroke-width: 1.8px;
+    fill: none;
+}
+
+.stroke__Fimg path {
+    stroke: #fff5f0;
+    stroke-width: .8px;
+    fill: none;
+}
+
+.header__logo path,
+.stroke__Bimg path {
+    stroke: none;
+    fill: currentColor;
+}
+
+
+// mouse hover
+.mouse__color {
+    background-color: #258 !important;
+}
+
+
+// skill icon
+.fadeIn {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
+}
+
+
+// footer title
+.fadeUp-isActive {
+    animation-name: fadeUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+// mouse
+.mouseActive {
+    width: 85px !important;
+    height: 85px !important;
+    background-color: transparent !important;
+    margin: -45px 0 0 -45px !important;
+}
+
+.mouseActive-txt {
+    width: 110px !important;
+    height: 110px !important;
+    margin: -55px 0 0 -55px !important;
+    position: relative;
+
+    &:after{
+        content:'COPY';
+        display: inline-block;
+        font-family: 'Bodoni Moda', serif;
+        font-size: 16px;
+        color: #000;
+        @include center;
+        padding-bottom: 10px;
+    }
+}

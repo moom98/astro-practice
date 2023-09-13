@@ -1,0 +1,86 @@
+.swiper{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.swiper-pic{
+    width: 300px;
+    height: 300px;
+
+    @media screen and (min-width: 768px) {
+        width: calc(80vw * .5);
+        height: calc(80vw * .5);
+        min-width: 450px;
+        min-height: 450px;
+        max-width: 600px;
+        max-height: 600px;
+    }
+
+    &__slide{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        
+        background-color: #258;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+.swiper-txt{
+    width: 90vw;
+    @media screen and (min-width: 768px) {
+      width: 505px;
+    }
+
+    &__wrapper{
+        margin-bottom: 30px;
+    }
+
+    &__ttl{
+        @include secttl;
+        font-size: 26px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 23px;
+    }
+
+    &__txt{
+        width: 260px;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+        @media screen and (min-width: 768px) {
+          width: 380px;
+        }
+    }
+
+    &__pagination{
+        @include secttl;
+        font-weight: 300;
+        @include fc-pink;
+    }
+
+    &__prev,
+    &__next {
+        @include fc-pink;
+
+        &:after{
+            font-size: 15px;
+        }
+    }
+}
+
+.swiper-button-next{
+    right: 0;
+
+}
+.swiper-button-prev{
+    left: 0;
+}

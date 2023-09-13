@@ -1,0 +1,95 @@
+.gnav {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    font-family: aktiv-grotesk, sans-serif;
+    transition: 1.5s;
+
+    @media screen and (min-width: 1024px) {
+        opacity: 1;
+        pointer-events: all;
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+        background-color: transparent;
+    }
+
+    &__wrap {
+        padding: 0 28px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translatey(-50%);
+
+        @media screen and (min-width: 768px) {
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        @media screen and (min-width: 1024px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+        }
+    }
+
+    &__nav {
+        @media screen and (min-width: 1024px) {
+            @include flex;
+        }
+    }
+
+    &__list {
+        padding-bottom: 10px;
+
+        @media screen and (min-width: 768px) {
+          padding-bottom: 20px;
+        }
+
+        @media screen and (min-width: 1024px) {
+          padding-left: 106px;
+          padding-bottom: 0;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 6px;
+        font-size: 34px;
+        transition: .8s;
+
+        @media screen and (max-width: 1023px) {
+            color: #fff5f0 !important;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: 13px;
+            color: #fff5f0;
+        }
+    }
+
+
+    &__mail {
+        padding: 0 28px;
+        margin-bottom: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &__mailLink {
+        color: #fff5f0 !important;
+        text-decoration: underline;
+        
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+}

@@ -1,55 +1,45 @@
+---
+import "@styles/layout/_header.scss";
+import "@styles/layout/_nav.scss";
+
+import { Image } from "astro:assets";
+import headerLogo from "@images/common/header_logo.svg";
+---
+
 <div id="splash"></div>
 <div class="splashbg"></div>
-
-<div class="wrapper" id="wrapper">
-  <div id="mouse"></div>
-  <div class="secScroll" id="secScroll">
-    <div class="secScroll__top">01</div>
-    <div class="secScroll__middle">
-      <div class="secScroll__middle-line"></div>
-    </div>
-    <div class="secScroll__bottom">05</div>
+<header class="header" id="header">
+  <h1 class="header__ttl stkr-target">
+    <a href="/" class="header___link" aria-label="topページの最上部へ移動する">
+      <Image src={headerLogo} alt="maya_uematsu" class="header__logo" />
+    </a>
+  </h1>
+  <div class="btn" id="btn">
+    <span class="btn__top"></span>
+    <span class="btn__middle"></span>
+    <span class="btn__bottom"></span>
   </div>
-
-  <header class="header" id="header">
-    <h1 class="header__ttl stkr-target">
-      <a
-        href="/"
-        class="header___link"
-        aria-label="topページの最上部へ移動する"
-      >
-        <img
-          src="images/header_logo.svg"
-          alt="maya_uematsu"
-          class="header__logo"
-        /></a
-      >
-    </h1>
-    <div class="btn" id="btn">
-      <span class="btn__top"></span>
-      <span class="btn__middle"></span>
-      <span class="btn__bottom"></span>
+  <nav class="gnav" id="gnav">
+    <div class="gnav__wrap">
+      <ul class="gnav__nav">
+        <li class="gnav__list stkr-target">
+          <a href="#about" class="gnav__link">ABOUT</a>
+        </li>
+        <li class="gnav__list stkr-target">
+          <a href="#work" class="gnav__link">WORK</a>
+        </li>
+        <li class="gnav__list stkr-target">
+          <a href="#skill" class="gnav__link">SKILL</a>
+        </li>
+        <li class="gnav__list stkr-target">
+          <a href="#int" class="gnav__link">INTERESTING</a>
+        </li>
+      </ul>
     </div>
-    <nav class="gnav" id="gnav">
-      <div class="gnav__wrap">
-        <ul class="gnav__nav">
-          <li class="gnav__list stkr-target">
-            <a href="#about" class="gnav__link">ABOUT</a>
-          </li>
-          <li class="gnav__list stkr-target">
-            <a href="#work" class="gnav__link">WORK</a>
-          </li>
-          <li class="gnav__list stkr-target">
-            <a href="#skill" class="gnav__link">SKILL</a>
-          </li>
-          <li class="gnav__list stkr-target">
-            <a href="#int" class="gnav__link">INTERESTING</a>
-          </li>
-        </ul>
-      </div>
-      <div class="gnav__mail">
-        <a href="#" class="gnav__mailLink">ymkmy98@gmail.com</a>
-      </div>
-    </nav>
-  </header>
-</div>
+    <div class="gnav__mail">
+      <a href="mailto:ymkmy98@gmail.com" class="gnav__mailLink"
+        >ymkmy98@gmail.com</a
+      >
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,214 @@
+.footer {
+    padding: 130px 28px 40px;
+    @include fc-pink;
+
+    @media screen and (min-width: 1024px) {
+        padding-top: 245px;
+    }
+
+    &__ttl {
+        width: fit-content;
+        @include secttl;
+        margin: 0 auto 25px;
+        font-size: 45px;
+        font-weight: 300;
+        display: flex;
+        gap: 5px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    span {
+        opacity: 0;
+
+        &:nth-of-type(1) {
+            animation-delay: 0.1s;
+        }
+
+        &:nth-of-type(2) {
+            animation-delay: 0.15s;
+        }
+
+        &:nth-of-type(3) {
+            animation-delay: 0.25s;
+        }
+
+        &:nth-of-type(4) {
+            animation-delay: 0.3s;
+        }
+
+        &:nth-of-type(5) {
+            animation-delay: 0.35s;
+        }
+
+        &:nth-of-type(6) {
+            animation-delay: 0.4s;
+        }
+
+        &:nth-of-type(7) {
+            animation-delay: 0.45s;
+        }
+
+        &:nth-of-type(8) {
+            animation-delay: 0.5s;
+        }
+
+        &:nth-of-type(9) {
+            animation-delay: 0.55s;
+        }
+
+        &:nth-of-type(10) {
+            animation-delay: 0.6s;
+        }
+    }
+
+
+    &__txt {
+        margin-bottom: 75px;
+        font-size: 14px;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+        text-align: center;
+
+        opacity: 0;
+        animation-delay: 0.75s;
+
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 190px;
+            line-height: 1.8;
+        }
+    }
+
+    br {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    .form {
+        width: 100%;
+        max-width: 620px;
+        margin: 0 auto 227px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 110px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 227px;
+        }
+
+        &__box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: solid 1px #FFF5F0;
+
+            &:nth-child(3) {
+                display: block;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                border: none;
+            }
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &__label {
+            display: block;
+            @include secttl;
+            font-size: 20px;
+            font-weight: 300;
+            padding-bottom: 3px;
+        }
+
+        &__input {
+            width: 100%;
+            padding: 10px;
+            background-color: transparent;
+            border: none;
+            border-radius: 2px;
+            @include fc-pink;
+            font-size: 14px;
+            letter-spacing: .2em;
+        }
+
+        &__textarea {
+            width: 100%;
+            height: 180px;
+            padding: 10px;
+            margin-top: 10px;
+            background: transparent;
+            @include fc-pink;
+            border: solid 1px #FFF5F0;
+            border-radius: 2px;
+            font-size: 14px;
+            letter-spacing: .2em;
+        }
+
+        &__submit {
+            padding: 10px 20px;
+            margin: 0 auto;
+            @include secttl;
+            color: #000;
+            font-size: 14px;
+            font-weight: 300;
+            background-color: #FFF5F0;
+            border: solid 1px #FFF5F0;
+            border-radius: 2px;
+            letter-spacing: 0.2em;
+            transition: .5s;
+            -webkit-appearance: none;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #000;
+                color: #FFF5F0;
+            }
+        }
+
+        &__message{
+            display: none;
+            text-align: center;
+            line-height: 1.2;
+        }
+    
+        &__false{
+            display: none;
+            text-align: center;
+        }
+    }
+
+
+
+
+    &__txtCopy {
+        display: none;
+    }
+
+    &__mail {
+        display: block;
+        margin-bottom: 70px;
+        cursor: pointer;
+        transition: .8s;
+    }
+
+
+    &__copy {
+        @include ttl;
+        font-size: 12px;
+        text-align: center;
+    }
+}

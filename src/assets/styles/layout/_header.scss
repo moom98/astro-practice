@@ -1,0 +1,49 @@
+.header {
+  width: 100vw;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  @include flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 1024px) {
+    padding: 35px 45px;
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 2;
+    width: calc(100vw / 3);
+    @media screen and (min-width: 768px) {
+      width: 163px;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  background-color: transparent;
+  border: none;
+  padding: 5px 30px 5px 5px;
+  z-index: 2;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  &__top {
+    @include btn(0, -7px);
+    width: 10px;
+  }
+
+  &__middle {
+    @include btn(0);
+  }
+
+  &__bottom {
+    @include btn(10px, 7px);
+    width: 10px;
+  }
+}
